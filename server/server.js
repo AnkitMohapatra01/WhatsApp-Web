@@ -90,6 +90,9 @@ app.use("/conversations", conversationRoutes);
 app.use("/messages", messageRoutes);
 
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
-  console.log(`Server is running at PORT:${PORT}`);
-});
+if(process.env.NODE_ENV!=='production'){
+  server.listen(PORT, () => {
+    console.log(`Server is running at PORT:${PORT}`);
+  });
+}
+export default server;
