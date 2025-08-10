@@ -6,6 +6,7 @@ import { Server } from "socket.io";
 import { ConnectDB } from "./config/db.js";
 import conversationRoutes from "./routes/conversationRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
+import ProcessedMessage from "./models/ProcessedMessage.js";
 
 //? Express App
 const app = express();
