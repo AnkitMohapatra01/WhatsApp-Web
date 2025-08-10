@@ -1,7 +1,7 @@
 // api.js
 import axios from "axios";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_BACKEND_URL;
 
 export async function fetchConversations() {
   const res = await axios.get(`${API_BASE}/conversations`);
